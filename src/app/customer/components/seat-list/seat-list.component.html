@@ -1,0 +1,14 @@
+<div class="pagination-page">
+    <div class="rowItem" *ngFor="let item of (items | async) | paginate: { itemsPerPage: 4, currentPage: p }; let i = index">
+        <div *ngIf="item.seatid != null" class="pagename">
+            <bbts-seat-detail number="{{item.seatid}}" price="{{item.price}}" from="{{from}}" to="{{to}}" stime="{{stime}}" busnumber ="{{item.busnum}}"
+                (cancel)="cancelSeat(i)">
+            </bbts-seat-detail>
+        </div>
+    </div>
+</div>
+<div class="clear"></div>
+<br>
+<div class="nav-button">
+    <pagination-controls (pageChange)="p = $event"></pagination-controls>
+</div>

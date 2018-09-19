@@ -1,0 +1,22 @@
+<div class="login-wrap">
+
+    <header class="login-header">
+      <h1>Bus Booking</h1>
+      <h2 class="little-big-header">Register!</h2>
+    </header>
+  
+  
+    <div class="area">
+      <div *ngIf="(nav | async).isForm1">
+        <bbts-register-form1></bbts-register-form1>
+      </div>
+      <div *ngIf="(nav | async).isForm2">
+        <bbts-register-form2></bbts-register-form2>
+      </div>
+    </div>
+  
+    <div class="signup-callout">
+      Have an account?
+      <a routerLink="/login">Sign in now!</a>
+    </div>
+  </div>

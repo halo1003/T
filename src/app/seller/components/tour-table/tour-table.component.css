@@ -1,0 +1,27 @@
+td {
+    border: 1px solid grey;
+    border-collapse: collapse;
+    padding: 5px;
+}
+
+table.middle {
+    border: 1px solid grey;    
+    position: relative;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+}
+
+th {
+    border: 1px solid grey;
+    border-collapse: collapse;
+    background-color: darkgray;
+    color: black;
+    padding: 9px;
+}
+
+select,
+option {
+    color: black;
+    background-color: darkgray;
+}

@@ -1,0 +1,221 @@
+.notseat {
+    background-color: black;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+.seat {
+    color: darkgray;
+}
+
+.detailseat {
+    position: absolute;
+    top: 55%;
+    left: 45%;
+    color: darkgray;
+}
+
+.detail {
+    position: absolute;
+    top: 60%;
+    left: 45%;
+    color: darkgray;
+}
+
+.checkout {
+    position: absolute;
+    top: 55%;
+    left: 60%;
+    color: darkgray;
+}
+
+.wrapper {
+    width: 100%;
+    text-align: center;
+}
+
+.container {
+    margin: 0 auto;
+    width: 400px;
+    text-align: center;
+}
+
+.booking-details {
+    float: left;
+    text-align: left;
+    margin-left: 35px;
+    font-size: 12px;
+    position: relative;
+    height: 401px;
+}
+
+h2 {
+    margin: 25px 0 20px 0;
+    font-size: 30px;
+    color: darkgray;
+}
+
+h3 {
+    margin: 5px 5px 0 0;
+    font-size: 17px;
+    color: darkgray;
+}
+
+div.seatCharts-cell {
+    color: #182C4E;
+    height: 25px;
+    width: 25px;
+    line-height: 25px;
+}
+
+div.seatCharts-seat {
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+div.seatCharts-row {
+    height: 35px;
+}
+
+div.seatCharts-seat.available {
+    background-color: #B9DEA0;
+}
+
+div.seatCharts-seat.available.first-class {
+    /* 	background: url(vip.png); */
+    background-color: #3a78c3;
+}
+
+div.seatCharts-seat.selected {
+    background-color: #E6CAC4;
+}
+
+div.seatCharts-seat.unavailable {
+    background-color: #FF3333;
+}
+
+div.seatCharts-container {
+    border-right: 1px dotted #adadad;
+    width: 200px;
+    padding-top: 40px;
+    float: left;
+}
+
+div.seatCharts-legend {
+    padding-top: 30px;
+    position: absolute;
+    bottom: 16px;
+}
+
+ul.seatCharts-legendList {
+    padding-top: 30px;
+}
+
+span.seatCharts-legendDescription {
+    margin-left: 5px;
+    line-height: 30px;
+}
+
+#selected-seats {
+    max-height: 90px;
+    overflow-y: scroll;
+    overflow-x: none;
+    width: 170px;
+}
+
+div.seatCharts-cell {
+    font-size: 13px;
+    display: inline-block;
+    background: blue;
+    margin: 10px 0 0 10px;
+    flex-grow: 1;
+    height: 40px;
+}
+
+div.seatCharts-seat {
+    text-align: center;
+    border-radius: 5px;
+    cursor: default;
+    width: 13%;
+}
+
+div.seatCharts-seat:focus {
+    border: none;
+}
+
+/*
+.seatCharts-seat:focus {
+	outline: none;
+}
+*/
+
+div.seatCharts-space {
+    background-color: white;
+}
+
+div.seatCharts-row {
+    height: 50px;
+}
+
+div.seatCharts-row:after {
+    clear: both;
+}
+
+ul.seatCharts-legendList {
+    list-style: none;
+}
+
+li.seatCharts-legendItem {
+    margin-top: 10px;
+    line-height: 2;
+}
+
+/* latin-ext */
+
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Lato Regular'), local('Lato-Regular'), url(http://fonts.gstatic.com/s/lato/v14/S6uyw4BMUTPHjxAwXjeu.woff2) format('woff2');
+    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+/* latin */
+
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Lato Regular'), local('Lato-Regular'), url(http://fonts.gstatic.com/s/lato/v14/S6uyw4BMUTPHjx4wXg.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* latin-ext */
+
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Lato Bold'), local('Lato-Bold'), url(http://fonts.gstatic.com/s/lato/v14/S6u9w4BMUTPHh6UVSwaPGR_p.woff2) format('woff2');
+    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+/* latin */
+
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Lato Bold'), local('Lato-Bold'), url(http://fonts.gstatic.com/s/lato/v14/S6u9w4BMUTPHh6UVSwiPGQ.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+.row {
+    display: flex;
+    font-size: 0;
+    flex-wrap: wrap;
+    margin: -0px 0 0 0px;
+    width: 70%;
+}

@@ -1,0 +1,28 @@
+<div class="form-style-10" style="margin-left:3%">
+    <h1>
+        {{title}} {{userid}}
+        <select [(ngModel)]="selectedOption" style="color: #888">            
+            <option [value]="role.id" *ngFor="let role of roles">{{role.name}}</option>
+        </select>
+    </h1>
+    <form>
+        <div class="section"><span>1</span>Authority </div>
+        <div class="inner-wrap">                        
+            <label>Username <input type="text" name="_username" [value]="username" [(ngModel)]="_username" [disabled] = "_isSubmit"/></label>
+            <label>Password <input type="password" name="_password" [value]="password" [(ngModel)]="_password" [disabled] = "_isSubmit" /></label>
+            <label>Confirm Password <input type="password" name="_confirm" [(ngModel)]="_confirm" [disabled] = "_isSubmit"/></label>
+        </div>
+
+        <div class="section"><span>2</span>User Information</div>
+        <div class="inner-wrap">
+            <label>User Full Name <input type="text" name="_name" [value]="name" [(ngModel)]="_name"/></label>
+            <label>Email Address <input type="email" name="_email" [value]="email" [(ngModel)]="_email" /></label>
+            <label>Phone Number <input type="text" name="_phone" [value]="phone" [(ngModel)]="_phone"/></label>
+            <label>Age <input type="text" name="_age" [value]="age" [(ngModel)]="_age" /></label>
+        </div>        
+        <div class="button-section">
+            <input *ngIf="_isSubmit" type="button" (click)="submit()" name="Save" value="Save"/>
+            <input *ngIf="_isCreate" type="button" (click)="create()" name="Save" value="Create"/>
+        </div>        
+    </form>
+</div>

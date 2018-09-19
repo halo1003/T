@@ -1,0 +1,45 @@
+<table class="middle">
+    <tr>
+      <th width = "100">ID
+        <button type="button" class="btn btn-default btn-sm" (click)="paginationID(page)">
+          <span class="glyphicon glyphicon-chevron-down"></span>
+        </button>
+      </th>
+      <th width = "100">Booked at
+        <button type="button" class="btn btn-default btn-sm" (click)="paginationByTime(page)">
+          <span class="glyphicon glyphicon-chevron-down"></span>
+        </button>
+      </th>
+      <th width = "100">Seat</th>
+      <th width = "100">Bus
+        <button type="button" class="btn btn-default btn-sm" (click)="paginationBus(page)">
+          <span class="glyphicon glyphicon-chevron-down"></span>
+        </button>
+      </th>
+      <th width = "100">From</th>
+      <th width = "100">To</th>
+      <th width = "100">Start on</th>
+      <th width = "100">End on</th>
+    </tr>
+    <tr *ngFor="let ticket of tickets, let i = index">
+      <td>{{ticket.id}}</td>
+      <td>{{ticket.timecreate}}</td>
+      <td>{{ticket.seat.numberSeat}}</td>
+      <td>{{ticket.bus.busNumber}}</td>
+      <td>{{ticket.tour.startPlace}}</td>
+      <td>{{ticket.tour.endPlace}}</td>
+      <td>{{ticket.tour.startTime}}</td>
+      <td>{{ticket.tour.endTime}}</td>
+      <td>
+        <a class="btn btn-info btn-sm" (click)="deleteItem(i)">
+          <span class="glyphicon glyphicon-remove"></span> Delete
+        </a>
+      </td>
+    </tr>
+
+  </table>
+
+  <div class="page">
+    <ngb-pagination  [collectionSize]="maxSize * 10" [(page)]="page" [maxSize]="5" [rotate]="true"
+    [boundaryLinks]="true" (pageChange)="paginate($event)"></ngb-pagination>
+</div>

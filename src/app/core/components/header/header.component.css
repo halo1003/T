@@ -1,0 +1,23 @@
+@import "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css";
+@import "https://static.codepen.io/assets/page/page-MQ-01aec83f48b324a8e2b90ef97fd733c8075a3f5689501951d6447e3c59bab7e8.css";
+@import "https://static.codepen.io/assets/search/search-e950d0feab8f464d891848164d4ffaaae57006369b7ca9522b6939a04f6f2019.css";
+@import "https://static.codepen.io/assets/global/global-MQ-7394c3cd3906b65e10d715867ab3b01361fcf26aa515fd62bccb5d1e8cc45afa.css";
+
+.primary-pro{
+    pointer-events: none;
+}
+
+.primary-nav .primary a{
+    text-decoration: none;
+}
+
+.primary-nav>ul>li>a{
+    text-decoration: none;
+}
+
+.primary-actions {
+    position: absolute;
+    right: 0px;
+    top:10px;
+}
+

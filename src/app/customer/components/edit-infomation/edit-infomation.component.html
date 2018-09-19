@@ -1,0 +1,37 @@
+<div>
+    <h1 class="center">Update User Information</h1>
+</div>
+
+<div class="container">
+    <form class="login-form top-label-form" id="login-login-form" accept-charset="UTF-8">        
+
+        <div id="login-email" class="field">
+            <label for="login-email-field">Email</label>
+            <input type="text" name="email" [(ngModel)]="email" id="email-field" value="{{email}}" required="required" >
+        </div>
+
+        <div id="login-email" class="field">
+            <label for="login-email-field">Fullname</label>
+            <input type="text" name="fullname" [(ngModel)]="fullname" id="name-field" value="{{fullname}}" required="required"  >
+        </div>
+
+        <div id="login-password" class="field">
+            <label for="login-password-field">Age</label>
+            <input type="text" name="age" [(ngModel)]="age" id="age-field" value="{{age}}" required="required" >
+        </div>
+
+        <div id="login-password" class="field">
+            <label for="login-password-field">Phone</label>
+            <input type="text" name="phone" [(ngModel)]="phone" id="phone-field" value="{{phone}}" required="required">
+        </div>
+
+        <br>
+        <div class="field">
+            <button id="log-in-button" class=" recaptcha-trigger-button button green action-button expand-right " type="submit"
+                (click)="update()">
+                <span class="label">Submit</span>
+                <span class="spinner"></span>
+            </button>
+        </div>
+    </form>
+</div>

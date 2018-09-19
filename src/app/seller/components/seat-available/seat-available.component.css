@@ -1,0 +1,61 @@
+td {
+    border: 1px solid grey;
+    border-collapse: collapse;
+    padding: 5px;
+}
+
+.middle {
+    border: 1px solid grey;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 3%;  
+    text-align: center;
+}
+
+th {
+    border: 1px solid grey;
+    border-collapse: collapse;
+    background-color: darkgray;
+    color: black;
+    padding: 9px;
+}
+
+.h2 {
+    color: darkgray;
+    position: relative;
+    width: 100%;
+    text-align: center;
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+
+select,
+option {
+    color: black;
+    background-color: darkgray;
+}
+
+form {
+    position: relative;
+    align-items: center;
+    text-align: center;
+    margin: 3%;
+}
+
+.wrapper {
+    color: black;
+    width: 80px;
+}
+
+.wrapper-seat {
+    color: black;
+    width: 60px;
+}
+
+.page {
+    position: absolute;
+    margin-top:5%;
+    margin-left:40%;
+    
+  }

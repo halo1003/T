@@ -1,0 +1,113 @@
+<div>
+    <div class="clear"></div>
+    <table class="middle">
+      <tr>
+        <th width="100">ID</th>
+        <th width="100">User Name</th>
+        <th width="100">Name</th>
+        <th width="80">Seat Number</th>
+        <th>Book Time</th>
+        <th width="100">Bus Number</th>
+        <th *ngIf="!(isEdit|async).isOpen" width="100">From</th>
+        <th *ngIf="!(isEdit|async).isOpen" width="100">To</th>
+        <th *ngIf="!(isEdit|async).isOpen">Start Time</th>
+        <th *ngIf="!(isEdit|async).isOpen">End Time</th>
+        <th *ngIf="(isEdit|async).isOpen" width="100">Tour ID</th>
+      </tr>
+      <tr *ngFor="let ticket of tickets ; let i = index">
+        <td>{{ticket.id}}</td>
+
+        <td height="80">
+          <div *ngIf="!(isEdit|async).isOpen || i != (EditData|async).index">{{ticket.user.username}}</div>
+          <mat-form-field class="wrapper" *ngIf="i == (EditData|async).index">
+            <input matInput type="text" matInput [formControl]="UsersControl" [matAutocomplete]="auto" />
+            <mat-autocomplete (optionSelected)="onSelectionChanged($event)" [panelWidth]="180" #auto="matAutocomplete"
+              [displayWith]="displayFnUser">
+              <mat-option *ngFor="let option of filteredUsers | async" [value]="option">{{option.username}}</mat-option>
+            </mat-autocomplete>
+          </mat-form-field>
+        </td>
+
+        <td>
+          <ng-container *ngIf="i != (EditData|async).index">
+            {{ticket.user.name}}
+          </ng-container>
+
+          <ng-container *ngIf="i == (EditData|async).index">
+            {{_fullname}}
+          </ng-container>
+        </td>
+
+        <td>
+          <div *ngIf="!(isEdit|async).isOpen || i != (EditData|async).index">
+            {{ticket.seat.numberSeat}}
+          </div>
+          <mat-form-field class="wrapper-seat" *ngIf="i == (EditData|async).index">
+            <input type="text" matInput [formControl]="SeatsControl" [matAutocomplete]="auto">
+            <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFnSeat">
+              <mat-option *ngFor="let option of filteredSeats | async" [value]="option">{{option.seatnumber}}</mat-option>
+            </mat-autocomplete>
+          </mat-form-field>
+        </td>
+
+        <td>{{ticket.timecreate}}</td>
+
+        <td>
+          <div *ngIf="!(isEdit|async).isOpen || i != (EditData|async).index">
+            {{ticket.bus.busNumber}}
+          </div>
+          <mat-form-field class="wrapper" *ngIf="i == (EditData|async).index">
+            <input matInput type="text" matInput [formControl]="BusesControl" [matAutocomplete]="auto" />
+            <mat-autocomplete [panelWidth]="180" #auto="matAutocomplete" [displayWith]="displayFnBus">
+              <mat-option *ngFor="let option of filteredBuses | async" [value]="option">{{option.busNumber}}</mat-option>
+            </mat-autocomplete>
+          </mat-form-field>
+        </td>
+        <td *ngIf="!(isEdit|async).isOpen">{{ticket.tour.startPlace}}</td>
+        <td *ngIf="!(isEdit|async).isOpen">{{ticket.tour.endPlace}}</td>
+        <td *ngIf="!(isEdit|async).isOpen">{{ticket.tour.startTime}}</td>
+        <td *ngIf="!(isEdit|async).isOpen">{{ticket.tour.endTime}}</td>
+
+        <td *ngIf="(isEdit|async).isOpen">
+          <div *ngIf="i != (EditData|async).index && (isEdit|async).isOpen">
+            {{ticket.tour.id}}
+          </div>
+          <mat-form-field class="wrapper" *ngIf="i == (EditData|async).index">
+            <input matInput type="text" matInput [formControl]="BusesControl" [matAutocomplete]="auto" />
+            <mat-autocomplete [panelWidth]="180" #auto="matAutocomplete" [displayWith]="displayFnBus" class="swrapp">
+              <mat-option *ngFor="let option of filteredBuses | async" [value]="option">{{option.busNumber}}</mat-option>
+            </mat-autocomplete>
+          </mat-form-field>
+        </td>
+
+        <td *ngIf="(EditData|async).index == null">
+          <a class="btn btn-info btn-sm">
+            <span class="glyphicon glyphicon-pencil"></span> Update {{i}}
+          </a>
+        </td>
+        <td *ngIf="(EditData|async).index == i && (EditData|async).index != null">
+          <a class="btn btn-info btn-sm" >
+            <span class="glyphicon glyphicon-remove"></span> Cancel
+          </a>
+        </td>
+        <td *ngIf="(EditData|async).index == i && (EditData|async).index != null">
+          <a class="btn btn-info btn-sm">
+            <span class="glyphicon glyphicon-remove"></span> Save
+          </a>
+        </td>
+
+        <td *ngIf="(EditData|async).index == i && (EditData|async).index != null">
+          <a class="btn btn-info btn-sm">
+            <span class="glyphicon glyphicon-remove"></span> Delete
+          </a>
+        </td>
+      </tr>
+
+    </table>
+
+    <bbts-tour-table *ngIf="(isEdit|async).isOpen"></bbts-tour-table>
+
+    <ngb-pagination  class="page" [collectionSize]="maxSize * 10" [(page)]="page" [maxSize]="5"
+      [rotate]="true" [boundaryLinks]="true" (pageChange)="paginationByTime($event)" ></ngb-pagination>
+
+  </div>

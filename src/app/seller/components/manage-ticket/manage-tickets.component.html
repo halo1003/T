@@ -1,0 +1,175 @@
+<h2 class="h2">Manage Ticket's Information</h2>
+<form>
+  <label> Username: </label>&nbsp;&nbsp;
+  <!-- <input class="placeinput" type="text" #userid /> -->
+  <select #username>
+    <option value="">---Please select---</option>
+    <option *ngFor="let idUser of tickets">{{ idUser.user.id }}</option>
+  </select>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+  <label> From: </label>&nbsp;&nbsp;
+  <!-- <input class="placeinput" type="text" #s /> -->
+  <select #s>
+    <option value="">---Please select---</option>
+    <option *ngFor="let startPlace of tickets">{{ startPlace.tour.startPlace }}</option>
+  </select>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+  <label> To: </label>&nbsp;&nbsp;
+  <select #to>
+    <option value="">---Please select---</option>
+    <option *ngFor="let endPlace of tickets">{{ endPlace.tour.endPlace }}</option>
+  </select>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+  <label> Start Time: </label>&nbsp;&nbsp;
+  <select #time>
+    <option value="">---Please select---</option>
+    <option *ngFor="let time of tickets">{{ time.timecreate }}</option>
+  </select>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <a class="btn btn-info btn-sm" >
+    <span class="glyphicon glyphicon-search"></span> Search
+  </a>
+</form>
+
+<!-- ---------------------------------TABLE-------------------------------------- -->
+
+<div>
+  <div class="clear"></div>
+  <table class="middle">
+    <tr>
+      <th width="100">ID
+        <button type="button" class="btn btn-default btn-sm" (click)="paginationID(page)">
+          <span class="glyphicon glyphicon-chevron-down"></span>
+        </button>
+      </th>
+      <th width="100">User Name
+        <button type="button" class="btn btn-default btn-sm" (click)="paginationUser(page)">
+          <span class="glyphicon glyphicon-chevron-down"></span>
+        </button>
+      </th>
+      <th width="100">Name</th>
+      <th>Book Time</th>
+      <th width="100">Bus Number
+        <button type="button" class="btn btn-default btn-sm" (click)="paginationBus(page)">
+          <span class="glyphicon glyphicon-chevron-down"></span>
+        </button>
+      </th>
+      <th *ngIf="!(isEdit|async).isOpen" width="100">From
+
+      </th>
+      <th *ngIf="!(isEdit|async).isOpen" width="100">To
+
+      </th>
+      <th *ngIf="!(isEdit|async).isOpen">Start Time
+
+      </th>
+      <th *ngIf="!(isEdit|async).isOpen">End Time
+
+      </th>
+      <th *ngIf="(isEdit|async).isOpen" width="100">Tour ID</th>
+      <th width="80">Seat Number</th>
+    </tr>
+    <tr *ngFor="let ticket of tickets; let i = index">
+      <td>{{ticket.id}}</td>
+
+      <td height="80">
+        <div *ngIf="!(isEdit|async).isOpen || i != (EditData|async).index">{{ticket.user.username}}</div>
+        <mat-form-field class="wrapper" *ngIf="i == (EditData|async).index">
+          <input matInput type="text" matInput [formControl]="UsersControl" [matAutocomplete]="auto" />
+          <mat-autocomplete (optionSelected)="onUsernameChanged($event)" [panelWidth]="180" #auto="matAutocomplete"
+            [displayWith]="displayFnUser">
+            <mat-option *ngFor="let option of filteredUsers | async" [value]="option">{{option.username}}</mat-option>
+          </mat-autocomplete>
+        </mat-form-field>
+      </td>
+
+      <td>
+        <ng-container *ngIf="i != (EditData|async).index">
+          {{ticket.user.name}}
+        </ng-container>
+
+        <ng-container *ngIf="i == (EditData|async).index">
+          {{_fullname}}
+        </ng-container>
+      </td>
+
+      <td>{{ticket.timecreate}}</td>
+
+      <td>
+        <div *ngIf="!(isEdit|async).isOpen || i != (EditData|async).index">
+          {{ticket.bus.busNumber}}
+        </div>
+        <mat-form-field class="wrapper" *ngIf="i == (EditData|async).index">
+          <input matInput type="text" matInput [formControl]="BusesControl" [matAutocomplete]="auto" />
+          <mat-autocomplete (optionSelected)="onNumberBuschanged($event)" [panelWidth]="180" #auto="matAutocomplete"
+            [displayWith]="displayFnBus">
+            <mat-option *ngFor="let option of filteredBuses | async" [value]="option">{{option.busNumber}}</mat-option>
+          </mat-autocomplete>
+        </mat-form-field>
+      </td>
+
+      <td *ngIf="!(isEdit|async).isOpen">{{ticket.tour.startPlace}}</td>
+      <td *ngIf="!(isEdit|async).isOpen">{{ticket.tour.endPlace}}</td>
+      <td *ngIf="!(isEdit|async).isOpen">{{ticket.tour.startTime}}</td>
+      <td *ngIf="!(isEdit|async).isOpen">{{ticket.tour.endTime}}</td>
+
+      <td *ngIf="(isEdit|async).isOpen">
+        <div *ngIf="i != (EditData|async).index && (isEdit|async).isOpen">
+          {{ticket.tour.id}}
+        </div>
+        <div *ngIf="i == (EditData|async).index">
+          <select *ngIf="tours.length !=0" (change)="onTourChanged($event)" style="width: 100%; background-color: white; height: 28px; margin-bottom: 7px; border: 3px solid #eaedf0; border-radius: 3px">
+            <option value=null>Select</option>
+            <option *ngFor="let tour of tours">{{ tour.tid }}</option>
+          </select>
+        </div>
+      </td>
+      <td>
+        <div *ngIf="!(isEdit|async).isOpen || i != (EditData|async).index">
+          {{ticket.seat.numberSeat}}
+        </div>
+        <div *ngIf="i == (EditData|async).index">
+          <select *ngIf="seats.length !=0" (change)="onSeatChanged($event)" style="width: 100%; background-color: white; height: 28px; margin-bottom: 7px; border: 3px solid #eaedf0; border-radius: 3px">
+            <option value=null>Select</option>
+            <option *ngFor="let seat of seats">{{ seat.seatnumber }}</option>
+          </select>
+        </div>
+      </td>
+
+      <td *ngIf="(EditData|async).index == null">
+        <a class="btn btn-info btn-sm" (click)="onShowEdit(ticket.user.id,ticket.user.username,
+                ticket.user.name, ticket.bus.id,ticket.bus.busNumber, ticket.tour.id,
+                ticket.seat.numberSeat,ticket.tour.startPlace,
+                ticket.tour.endPlace,ticket.tour.startTime,ticket.tour.endTime, i)">
+          <span class="glyphicon glyphicon-pencil"></span> Update
+        </a>
+      </td>
+      <td *ngIf="(EditData|async).index == i && (EditData|async).index != null">
+        <a class="btn btn-info btn-sm" (click)="onCancel()">
+          <span class="glyphicon glyphicon-remove"></span> Cancel
+        </a>
+      </td>
+      <td *ngIf="(EditData|async).index == i && (EditData|async).index != null">
+        <a class="btn btn-info btn-sm" (click)="updateTicketAction(i)">
+          <span class="glyphicon glyphicon-remove"></span> Save
+        </a>
+      </td>
+
+      <td *ngIf="(EditData|async).index == i && (EditData|async).index != null">
+        <a class="btn btn-info btn-sm" (click)="onDelect(i)">
+          <span class="glyphicon glyphicon-remove"></span> Delete
+        </a>
+      </td>
+    </tr>
+
+  </table>
+
+  <bbts-tour-table *ngIf="(isEdit|async).isOpen"></bbts-tour-table>
+
+  <ngb-pagination class="page" [collectionSize]="maxSize * 10" [(page)]="page" [maxSize]="5" [rotate]="true"
+    [boundaryLinks]="true" (pageChange)="paginate($event)"></ngb-pagination>
+
+</div>

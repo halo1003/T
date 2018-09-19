@@ -1,0 +1,27 @@
+<div class='event'>
+    <div class='event-side'>
+        <div class='dotted-line-separator'>
+            <span class='line'></span>
+        </div>
+        <div class='event-icon'>
+            <span class='fa fa-users'></span>
+        </div>
+        <div class='event-date'>{{busnumber}}</div>
+        <div class='event-time'>
+            {{from}} <span class='to'>to </span>{{to}}
+        </div>
+        <div class='cut-out'></div>
+    </div>
+    <div class='event-body'>
+        <div class='event-image'>
+            <a><span class='image'></span></a>
+        </div>
+        <div class="event-location">{{stime}}</div>
+        <div class="event-title">
+            <h3>Seat: {{number}}</h3>                       
+            <span>as Customer</span>
+            <button (click)="cancel.emit()">Cancel</button> 
+        </div>
+        <div class="event-details">Price: {{price}} VND</div>
+    </div>
+</div>
