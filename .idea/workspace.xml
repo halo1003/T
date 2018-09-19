@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="4d9e7e11-6b9e-4b81-9cb1-2897d708eb6b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/src/app/admin/actions/modal.actions.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/admin/admin-routing.module.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/admin/admin.module.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/admin/components/avatar/avatar.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/admin/components/avatar/avatar.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/admin/components/avatar/avatar.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/admin/components/create-form/create-form.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/admin/components/create-form/create-form.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/admin/components/create-form/create-form.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/admin/components/manage-user/manage-user.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/admin/components/manage-user/manage-user.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/admin/components/manage-user/manage-user.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/admin/components/update-user/update-user.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/admin/components/update-user/update-user.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/admin/components/update-user/update-user.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/admin/containers/create-page/create-page.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/admin/containers/create-page/create-page.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/admin/containers/create-page/create-page.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/admin/containers/home-page/home-page.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/admin/containers/home-page/home-page.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/admin/containers/home-page/home-page.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/admin/containers/manage-user-page/manage-user-page.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/admin/containers/manage-user-page/manage-user-page.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/admin/containers/manage-user-page/manage-user-page.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/admin/containers/update-user-page/update-user-page.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/admin/containers/update-user-page/update-user-page.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/admin/containers/update-user-page/update-user-page.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/admin/models/users.model.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/admin/reducers/modal.reducers.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/admin/services/admin-guard.service.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/admin/services/admin.service.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/admin/services/view.services.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app-routing.module.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.module.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/auth/actions/auth.actions.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/auth/actions/register-form-swicher.actions.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/auth/auth-routing.module.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/auth/auth.module.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/auth/components/login-form/login-form.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/auth/components/login-form/login-form.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/auth/components/login-form/login-form.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/auth/components/register-form1/register-form1.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/auth/components/register-form1/register-form1.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/auth/components/register-form1/register-form1.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/auth/components/register-form2/register-form2.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/auth/components/register-form2/register-form2.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/auth/components/register-form2/register-form2.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/auth/containers/login-page/login-page.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/auth/containers/login-page/login-page.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/auth/containers/login-page/login-page.componet.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/auth/containers/register-page/register-page.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/auth/containers/register-page/register-page.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/auth/containers/register-page/register-page.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/auth/effects/auth.effects.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/auth/models/user.model.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/auth/reducers/auth.reducer.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/auth/reducers/login-page.reducer.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/auth/reducers/register-form-swicher.reducer.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/auth/services/auth-guard.service.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/auth/services/auth.service.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/core/actions/navigate.actions.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/core/components/footer/footer.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/core/components/footer/footer.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/core/components/footer/footer.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/core/components/header/header.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/core/components/header/header.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/core/components/header/header.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/core/containers/app/app.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/core/containers/app/app.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/core/containers/app/app.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/core/containers/not-found-page/not-found-page.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/core/containers/not-found-page/not-found-page.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/core/containers/not-found-page/not-found-page.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/core/core.module.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/core/reducers/navigate.reducer.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/core/services/localstorage.service.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/customer/actions/find-booked-seat.actions.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/customer/actions/refresh.actions.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/customer/actions/seat-price-calculate.actions.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/customer/actions/seat-select.actions.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/customer/components/booking-seat-detail/booking-seat-detail.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/customer/components/booking-seat-detail/booking-seat-detail.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/customer/components/booking-seat-detail/booking-seat-detail.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/customer/components/booking-table/booking-table.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/customer/components/booking-table/booking-table.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/customer/components/booking-table/booking-table.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/customer/components/edit-infomation/edit-infomation.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/customer/components/edit-infomation/edit-infomation.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/customer/components/edit-infomation/edit-infomation.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/customer/components/history-list/history-list.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/customer/components/history-list/history-list.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/customer/components/history-list/history-list.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/customer/components/seat-detail/seat-detail.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/customer/components/seat-detail/seat-detail.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/customer/components/seat-detail/seat-detail.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/customer/components/seat-list/seat-list.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/customer/components/seat-list/seat-list.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/customer/components/seat-list/seat-list.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/customer/components/slider/slider.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/customer/components/slider/slider.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/customer/components/slider/slider.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/customer/components/table/date.adapter.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/customer/components/table/table.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/customer/components/table/table.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/customer/components/table/table.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/customer/containers/booking-page/booking-page.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/customer/containers/booking-page/booking-page.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/customer/containers/booking-page/booking-page.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/customer/containers/history-page/history-page.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/customer/containers/history-page/history-page.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/customer/containers/history-page/history-page.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/customer/containers/home-page/home-page.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/customer/containers/home-page/home-page.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/customer/containers/home-page/home-page.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/customer/containers/update-page/update.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/customer/containers/update-page/update.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/customer/containers/update-page/update.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/customer/customer-routing.module.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/customer/customer.module.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/customer/models/seat.model.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/customer/reducers/find-booked-seat.reducer.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/customer/reducers/price.reducer.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/customer/reducers/refresh.reducer.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/customer/reducers/seat-select.reducer.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/customer/services/customer-guard.service.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/customer/services/customer.service.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/customer/services/view.services.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/customer/table/table.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/customer/table/table.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/customer/table/table.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/reducers/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/seller/actions/modal.actions.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/seller/components/filter/filter.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/seller/components/filter/filter.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/seller/components/filter/filter.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/seller/components/manage-ticket/manage-tickets.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/seller/components/manage-ticket/manage-tickets.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/seller/components/manage-ticket/manage-tickets.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/seller/components/seat-available/seat-available.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/seller/components/seat-available/seat-available.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/seller/components/seat-available/seat-available.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/seller/components/select-box/select-box.component..css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/seller/components/select-box/select-box.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/seller/components/select-box/select-box.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/seller/components/tour-table/tour-table.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/seller/components/tour-table/tour-table.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/seller/components/tour-table/tour-table.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/seller/containers/home-page/home-page.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/seller/containers/home-page/home-page.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/seller/containers/home-page/home-page.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/seller/containers/manage-tickets-page/manage-tickets-page.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/seller/containers/manage-tickets-page/manage-tickets-page.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/seller/containers/manage-tickets-page/manage-tickets-page.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/seller/containers/update-ticket-page/update-ticket-page.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/seller/containers/update-ticket-page/update-ticket-page.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/seller/containers/update-ticket-page/update-ticket-page.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/seller/models/ticket.model.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/seller/reducers/modal.reducers.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/seller/seller-routing.module.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/seller/seller.module.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/seller/services/seller-guard.service.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/seller/services/seller.service.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/seller/services/view.services.ts" beforeDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/.tmp/" />
+    <ignored path="$PROJECT_DIR$/dist/" />
+    <ignored path="$PROJECT_DIR$/temp/" />
+    <ignored path="$PROJECT_DIR$/tmp/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="2083666258">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="1" />
+          <entry key="project.open.time.3" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.js.language.service.starts">
+        <counts>
+          <entry key="Angular2LanguageService" value="1" />
+          <entry key="TsLintLanguageService" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="ts" value="17" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="TypeScript" value="17" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="ts" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="TypeScript" value="2" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/app/customer/components/table/table.component.ts" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER">
+    <package-json value="$PROJECT_DIR$/package.json" />
+  </component>
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/node_modules" />
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths>
+      <path value="$PROJECT_DIR$/package.json" />
+    </packageJsonPaths>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="67" />
+    <option name="y" value="27" />
+    <option name="width" value="1380" />
+    <option name="height" value="1000" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="T" type="b2602c69:ProjectViewProjectNode" />
+              <item name="T" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="T" type="b2602c69:ProjectViewProjectNode" />
+              <item name="T" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.tslint" value="$PROJECT_DIR$/node_modules/tslint" />
+    <property name="nodejs.protractor.protractor_package" value="$PROJECT_DIR$/node_modules/protractor" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="npm.Angular CLI Server">
+    <configuration name="Tests" type="JavaScriptTestRunnerKarma" factoryName="Karma">
+      <config-file value="$PROJECT_DIR$/src/karma.conf.js" />
+      <karma-package-dir value="$PROJECT_DIR$/node_modules/@angular/cli" />
+      <working-directory value="$PROJECT_DIR$" />
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="E2E Tests" type="JavaScriptTestRunnerProtractor" factoryName="Protractor">
+      <config-file value="$PROJECT_DIR$/e2e/protractor.conf.js" />
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="Angular Application" type="JavascriptDebugType" factoryName="JavaScript Debug" uri="http://localhost:4200">
+      <method v="2" />
+    </configuration>
+    <configuration name="Angular CLI Server" type="js.build_tools.npm" factoryName="npm">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="JavaScript Debug.Angular Application" />
+      <item itemvalue="Karma.Tests" />
+      <item itemvalue="Protractor.E2E Tests" />
+      <item itemvalue="npm.Angular CLI Server" />
+    </list>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4d9e7e11-6b9e-4b81-9cb1-2897d708eb6b" name="Default Changelist" comment="" />
+      <created>1537340146536</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1537340146536</updated>
+      <workItem from="1537340149193" duration="4239000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="4239000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
+    <layout>
+      <window_info id="npm" side_tool="true" />
+      <window_info id="Favorites" side_tool="true" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17704917" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="TypeScript" />
+      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
+      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.32972974" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/app/customer/table/table.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="8" lean-forward="true" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/customer/components/table/table.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-465">
+          <caret line="14" column="25" lean-forward="true" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
+          <folding>
+            <element signature="e#1#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

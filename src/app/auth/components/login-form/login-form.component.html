@@ -1,0 +1,72 @@
+<div class="flex-grid">
+
+  <div class="login-half left">
+    <div class="login-area">
+
+      <form class="login-form top-label-form" id="login-login-form" accept-charset="UTF-8" [formGroup]="form" (ngSubmit)="submit()">
+        <input name="utf8" type="hidden" value="✓">        
+
+        <div id="login-email" class="field">
+          <label for="login-email-field">Username or Email</label>
+          <input type="text" name="email" id="login-email-field" value="" required="required" formControlName="username" [(ngModel)]="user.username">
+        </div>
+
+        <div id="login-password" class="field">
+          <label for="login-password-field">Password</label>
+          <input name="password" required="required" type="password" id="login-password-field_" formControlName="password" [(ngModel)]="user.password">
+        </div>
+
+        <div>
+          <button id="log-in-button" class="recaptcha-trigger-button button green action-button expand-right" type = "submit" (click) = "submit()" >
+            <span class="label">Log in</span>
+            <span class="spinner"></span>
+          </button>
+
+          &nbsp;&nbsp;
+          <a href="#" id="forgot-password-link" class="forgot-password-link">
+            Forgot Password?
+          </a>
+        </div>
+
+      </form>
+
+    </div>
+
+  </div>
+
+  <div class="login-divider">
+    <div class="bar bar-top"></div>
+    <span class="login-or">OR</span>
+    <div class="bar bar-bottom"></div>
+  </div>
+
+  <div class="login-half right">
+
+    <div class="login-social-buttons">      
+
+      <a id="login-with-twitter" href="#" data-network="Twitter" class="button social-account-button twitter-button button-fullwidth">
+        <svg class="icon-twitter" width="26" height="26">
+
+        </svg>
+        <span>Log In with Twitter</span>
+      </a>
+
+      <a id="login-with-github" href="#" data-network="Github" class="button github-button social-account-button button-fullwidth">
+        <svg class="icon-github" width="26" height="26">
+
+        </svg>
+        <span>Log In with Google</span>
+      </a>
+
+      <a id="login-with-facebook" href="#" data-network="Facebook" class="button social-account-button facebook-button button-fullwidth">
+        <svg class="icon-facebook" width="26" height="26">
+
+        </svg>
+        <span>Log In with Facebook</span>
+      </a>
+
+    </div>
+
+  </div>
+
+</div>

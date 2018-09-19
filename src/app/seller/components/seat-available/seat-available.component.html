@@ -1,0 +1,41 @@
+<h1></h1>
+
+<form>
+  <label> Tour Id: </label>&nbsp;&nbsp;
+  <!-- <input class="placeinput" type="text" #userid /> -->
+  <select #username>
+    <option value="">---Please select---</option>
+    <option *ngFor="let idUser of tickets">{{ idUser.user.id }}</option>
+  </select>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+  <label> Bus Id: </label>&nbsp;&nbsp;
+  <!-- <input class="placeinput" type="text" #s /> -->
+  <select #s>
+    <option value="">---Please select---</option>
+    <option *ngFor="let startPlace of tickets">{{ startPlace.tour.startPlace }}</option>
+  </select>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <a class="btn btn-info btn-sm">
+    <span class="glyphicon glyphicon-search"></span> Search
+  </a>
+</form>
+
+<div>
+  <div class="clear"></div>
+  <table class="middle">
+    <tr>
+      <th width="100">ID</th>
+      <th width="100">Seat</th>
+      <th width="150">Bus Number</th>
+      <th width="100">From</th>
+      <th width="100">To</th>
+      <th width="100">Start on</th>
+    </tr>
+    <tr *ngFor="let ticket of tickets ; let i = index">
+
+    </tr>
+
+  </table>
+
+</div>

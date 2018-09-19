@@ -1,0 +1,32 @@
+<h2 class="h2">Manage Ticket's Information</h2>
+<form>
+
+  <label> From: </label>&nbsp;&nbsp;
+  <input class="placeinput" type="text" #userid />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+  <label> From: </label>&nbsp;&nbsp;
+  <input class="placeinput" type="text" #from />
+  <!-- <select #from>
+    <option value="">---Please select---</option>
+    <option *ngFor="let startPlace of tickets">{{ startPlace.startPlace }}</option>
+  </select> -->
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+  <label> To: </label>&nbsp;&nbsp;
+  <select #to>
+    <option value="">---Please select---</option>
+    <option *ngFor="let to of endPlaces">{{ to.to }}</option>
+  </select>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+  <label> Start Time: </label>&nbsp;&nbsp;
+  <select #time>
+    <option value="">---Please select---</option>
+    <option *ngFor="let time of startTimes">{{ time.Time }}</option>
+  </select>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <a class="btn btn-info btn-sm">
+    <span class="glyphicon glyphicon-search" (click)="viewTicketByUserID(userid.value)"></span> Search
+  </a>
+</form>

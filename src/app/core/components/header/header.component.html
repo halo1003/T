@@ -1,0 +1,98 @@
+<header class="main-header">
+  <h1 class="logo header-chunk">
+    <a class="large-screen-logo">
+    </a>
+  </h1>
+
+  <div *ngIf="(nav | async).isAdmin">
+    <nav class="header-chunk primary-nav fill-space priority-nav" id="secondary-primary-nav" style="overflow: hidden;">
+      <ul style="white-space: normal;">
+
+        <li class="primary primary-collections primary-last">
+          <a [routerLink]="routerLink_admin_view">User Board</a>
+        </li>
+        <li class="primary primary-posts">
+          <a [routerLink]="routerLink_admin_create">Create New</a>
+        </li>
+        <!-- <li class="primary primary-collections primary-last">
+          <a [routerLink]="routerLink_admin_search">Search</a>
+        </li> -->
+        <!-- <li class="primary primary-projects">
+              <a href="#">Page2</a>
+            </li>
+            <li class="primary primary-posts">
+              <a href="#">Page3</a>
+            </li>
+            <li class="primary primary-collections primary-last">
+              <a href="#">Page4</a>
+            </li> -->
+        <!-- <li class="primary-spark">
+              <a href="#">Page1</a>
+            </li>
+            <li class="primary-jobs">
+              <a href="#">Page2</a>
+            </li>
+            <li class="primary-challenges">
+              <a href="#">Page3</a>
+            </li>
+            <li class="primary-blog">
+              <a href="#">Page4</a>
+            </li> -->
+        <li class="primary-pro" data-upsell-type="general">
+          <a href="#">User
+            <span class="badge badge-pro">Side</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+  <div *ngIf="(nav | async).isCleck">
+    <nav class="header-chunk primary-nav fill-space priority-nav" id="secondary-primary-nav" style="overflow: hidden;">
+      <ul style="white-space: normal;">
+        <li class="primary primary-pens" id="primary-nav-pens">
+          <a [routerLink]="routerLink_seller_ticket">Ticket Board</a>
+        </li>
+
+        <li class="primary primary-projects">
+          <a [routerLink]="routerLink_seller_update_ticket">Empty Seat</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+  <div *ngIf="(nav | async).isCustomer">
+    <nav class="header-chunk primary-nav fill-space priority-nav" id="secondary-primary-nav" style="overflow: hidden;">
+      <ul style="white-space: normal;">
+        <li class="primary primary-pens" id="primary-nav-pens">
+          <a [routerLink]="routerLink_home">Home</a>
+        </li>
+
+        <li class="primary primary-projects">
+          <a [routerLink]="routerLink_booking">Booking</a>
+        </li>
+        <li class="primary primary-posts">
+          <a [routerLink]="routerLink_history">History</a>
+        </li>
+
+        <li class="primary-spark">
+          <a [routerLink]="routerLink_edit">Update user Info</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  
+  <div *ngIf="fullname == null" class="header-chunk primary-actions">
+    <div id="user-header-dropdown" class="user-stuff header-chunk">
+      <a id="login-button" class="button button-medium login-button" [routerLink]="routerLink_login">Log In</a>
+      <a class="button button-medium signup-button" [routerLink]="routerLink_register">Sign Up</a>
+    </div>
+  </div>
+  
+  <div *ngIf="(logo_login|async).fullname != null || username != null" class="header-chunk primary-actions">
+    <div id="user-header-dropdown" class="user-stuff header-chunk">
+      <a class="button button-medium login-button">Wellcome {{fullname}}</a>
+      <a class="button button-medium signup-button" (click)="logout()">Logout</a>
+    </div>
+  </div>
+</header>

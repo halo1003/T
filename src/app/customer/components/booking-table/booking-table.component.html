@@ -1,0 +1,14 @@
+<div class="wrapper">
+    <h2>Booking Details</h2>
+    <div class="container">
+        <div class="row">
+            <div *ngFor="let s of seats" [class.selected]="s === selectedSeat" (click)="onSelect(s)" class="seatCharts-seat seatCharts-cell first-class"
+                [ngStyle]="{backgroundColor: s.seatid === null ? 'rgba(1, 1, 1, 0)'
+                : (s.isChoose === true && s.isNull === true) ? 'rgb(56,56,56)'
+                : s.isNull === true ? '#aqua'                
+                : '#FF3333'}"
+                [ngStyle]="{disabled: s.seatid=='null' ? 'true' : 'false'}">{{s.seatid}}
+            </div>            
+        </div>
+    </div>
+</div>

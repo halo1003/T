@@ -1,0 +1,51 @@
+td{
+    border: 1px solid grey;
+    border-collapse: collapse;
+    padding: 5px;
+  }
+table.middle{
+  border: 1px solid grey;
+  border-collapse: collapse;
+  position: relative;
+  margin-top:15%;
+  
+  
+}
+th {
+  border: 1px solid grey;
+  border-collapse: collapse;
+  background-color: darkgray;
+  color: black;
+  padding: 9px;
+}
+
+.page {
+  position: relative;    
+  margin-left: 40%;
+  margin-top: 35%;
+}
+
+
+
+.datepicker {
+  color: white;
+  
+}
+
+.search{
+  position: relative;
+  margin-top:20%;
+  margin-left: 20%
+}
+
+select,option {
+  color: black;
+  background-color: darkgray;
+}
+
+.placeinput{
+  color:black;
+}
+.dateinput{
+  color:white;
+}

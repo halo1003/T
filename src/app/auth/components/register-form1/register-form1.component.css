@@ -1,0 +1,18 @@
+.area{
+    margin-left: 23%;
+    margin-right: 23%;
+}
+
+button{
+    padding-right: 17%;
+    padding-left: 17%;
+    padding-top: 3%;    
+    padding-bottom: 3%;
+    background-color: #169e35;
+    margin-top: 10%;
+    border-width:0px;
+    border-radius:5px;
+    float: right;    
+    margin-left: 2%;
+    margin-right: 2%;
+}

@@ -1,0 +1,28 @@
+td{
+    color: darkgray;
+    
+    border-collapse: collapse;
+    padding: 5px;
+  }
+table.middle{
+  position: absolute;
+  top:70px;
+  right:63%
+  
+}
+h2{
+    color: darkgray;
+    position: absolute;
+    right: 43%;
+}
+.info{
+    color: black;
+}
+.save{
+    position: absolute;
+    right: 19%;
+}
+select,option {
+    color: black;
+    background-color: darkgray;
+}

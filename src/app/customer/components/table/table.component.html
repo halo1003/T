@@ -1,0 +1,73 @@
+
+<div class="search">
+  <label> Start Place: </label>&nbsp;&nbsp;
+  <!-- <input class="placeinput" type="text" #s /> -->
+    <select #s>
+      <option value="">---Please select---</option>
+      <option *ngFor="let from of startPlaces" >{{from}}</option>
+    </select>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+    <label> End Place: </label>&nbsp;&nbsp;
+    <!-- <input class="placeinput" type="text" #e /> -->
+    <select #e>
+      <option value="">---Please select---</option>
+      <option *ngFor="let to of endPlaces" >{{to}}</option>
+    </select>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <label> Date: </label>&nbsp;&nbsp;
+    <mat-form-field>
+      <input class="dateinput" matInput placeholder="Choose a date"   [matDatepicker]="myDatepicker"
+      [matAutocomplete]="auto" #date/>
+      <mat-autocomplete #auto="matAutocomplete">
+        <mat-option>
+          <mat-datepicker-toggle matSuffix [for]="myDatepicker"  ></mat-datepicker-toggle>
+          <mat-datepicker #myDatepicker ></mat-datepicker>
+        </mat-option>
+      </mat-autocomplete>
+    </mat-form-field>
+
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <a class="btn btn-info btn-sm" (click)="search(s.value, e.value, date.value) ">
+    <span class="glyphicon glyphicon-search" ></span> Search
+  </a>
+
+
+  </div>
+
+<div class="col-sm-8">
+<table class="middle">
+  <tr>
+    <th>ID</th>
+    <th>Start Place</th>
+    <th>End Place</th>
+    <th>Start Time</th>
+    <th>End Time</th>
+    <th>Total Seats</th>
+  </tr>
+  <tr *ngFor="let tour of tours; let i = index">
+    <td>{{tour.id}}</td>
+    <td>{{tour.startPlace}}</td>
+    <td>{{tour.endPlace}}</td>
+    <td>{{tour.startTime }}</td>
+    <td>{{tour.endTime}}</td>
+    <td>{{tour.totalSeats}}</td>
+    <td>
+        <a (click)="onClick(i)" class="btn btn-info  btn-sm">
+          <img src="/src/assets/glyphicons-bus.png"/>
+        </a>
+    </td>
+  </tr>
+
+</table>
+<br>
+
+</div>
+
+<div class="col-sm-4"></div>
+
+
+  <div class="page">
+      <ngb-pagination  [collectionSize]="maxSize * 10" [(page)]="page" [maxSize]="5" [rotate]="true"
+      [boundaryLinks]="true" (pageChange)="paginateAllTours($event)"></ngb-pagination>
+  </div>

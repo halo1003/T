@@ -1,0 +1,10 @@
+<ng-sidebar-container style="position: absolute; top : -1px">
+  <ng-sidebar [opened]="(modal|async).isOpen" [closeOnClickOutside] = "true" [showBackdrop] = "true">
+    <bbts-create-form title="Modifing userid" userid ={{(modalData|async).userid}} username="{{(modalData|async).username}}" password="{{(modalData|async).password}}"
+      name="{{(modalData|async).fullname}}" email="{{(modalData|async).email}}" phone="{{(modalData|async).phone}}" age="{{(modalData|async).age}}"
+      ></bbts-create-form>
+  </ng-sidebar>
+</ng-sidebar-container>
+<div>
+  <bbts-manage-user></bbts-manage-user>
+</div>

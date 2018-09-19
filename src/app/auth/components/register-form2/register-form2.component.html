@@ -1,0 +1,37 @@
+<div class="login-form top-label-form" id="login-login-form" action="/login" accept-charset="UTF-8" method="post">
+  <input name="utf8" type="hidden" value="✓">
+  <input type="hidden" name="authenticity_token" value="627daL71kUqQEjgAcJjGHEzfRpH0X2+iyRbHbUU/KI/7dlOhv5Vhnn8lrPVU9Mcf8FLojeRW0S+sIt+36/ixJw==">
+
+  <div id="login-email" class="field">
+    <label for="login-email-field">Full name</label>
+    <input [(ngModel)]="registerModel.fullname" witdh="50" type="text" name="email"  value="" required="required">
+  </div>
+
+  <div id="login-password" class="field">
+    <label for="login-password-field">Age</label>
+    <input [(ngModel)]="registerModel.age" required="required" type="text" >
+  </div>
+
+  <div id="login-password" class="field">
+    <label for="login-password-field">Phone</label>
+    <input [(ngModel)]="registerModel.phone"required="required" type="text">
+  </div>
+
+  <div id="login-password" class="field">
+    <label for="login-password-field">Email</label>
+    <input [(ngModel)]="registerModel.email"  required="required" type="text">
+  </div>
+
+  <div class="bbtn">
+    <button id="button" (click)="onBack()">
+      <span class="label">Back</span>
+      <span class="spinner"></span>
+    </button>
+
+    <button id="button" (click)="register()">
+      <span class="label">Register</span>
+      <span class="spinner"></span>
+    </button>
+    <div class="clear"></div>
+  </div>
+</div>

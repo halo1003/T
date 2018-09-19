@@ -1,0 +1,57 @@
+td {
+    border: 1px solid grey;
+    border-collapse: collapse;
+    padding: 5px;
+}
+
+table.middle {
+    border: 1px solid grey;
+    border-collapse: collapse;
+    position: relative;
+    margin-top: 5%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+th {
+    border: 1px solid grey;
+    border-collapse: collapse;
+    background-color: darkgray;
+    color: black;
+    padding: 9px;
+}
+
+h2 {
+    color: darkgray;
+    position: relative;
+    margin-top: 3%;
+    text-align: center;
+}
+
+select,
+option {
+    color: black;
+    background-color: darkgray;
+}
+
+.search {
+    position: relative;
+    margin-top: 3%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center
+}
+
+.paginate_button {
+    position: relative;
+    bottom: 0px;
+}
+
+.page {
+    position: relative;
+    margin-top: 45%;
+}
+
+.placeinput{
+    color:black;
+  }

@@ -1,0 +1,34 @@
+<div class="hardcode">
+  <table class="middle">
+    <tr>
+      <th>Tour ID</th>
+      <th>From</th>
+      <th>To</th>
+      <th>Start on</th>
+      <th>End on</th>
+      <th>Total seats</th>
+    </tr>
+    <tr *ngFor="let tour of tours ">
+      <td>{{tour.tid}}</td>
+      <td>{{tour.from}}</td>
+      <td>{{tour.to}}</td>
+      <td>{{tour.timestart}}</td>
+      <td>{{tour.timeend}}</td>
+      <td>{{tour.totalseats}}</td>
+      <td>
+        <a class="btn btn-info btn-sm">
+          <span class="glyphicon glyphicon-pencil"></span> Update
+        </a>
+      </td>
+      <td>
+        <a class="btn btn-info btn-sm">
+          <span class="glyphicon glyphicon-remove"></span> Cancel
+        </a>
+      </td>
+    </tr>
+  </table>
+</div>
+<div style="text-align: center">
+  <ngb-pagination class="page" [collectionSize]="maxSize * 10" [(page)]="page" [maxSize]="5" [rotate]="true"
+    [boundaryLinks]="true" (pageChange)="paginateViewAllTours($event)"></ngb-pagination>
+</div>

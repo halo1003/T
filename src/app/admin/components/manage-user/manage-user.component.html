@@ -1,0 +1,80 @@
+<h2>Manage User's Information</h2>
+<div class="search">
+  <label> User Name: </label>&nbsp;&nbsp;
+  <select #username>
+    <option value="">---Please select---</option>
+    <option *ngFor="let username of usernames">{{username}}</option>
+  </select>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+  <label> Name: </label>&nbsp;&nbsp;
+  <select #name>
+    <option value="">---Please select---</option>
+    <option *ngFor="let name of names">{{name}}</option>
+  </select>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <!-- <label> Role: </label>&nbsp;&nbsp;
+  <select #role>
+    <option value="">---Please select---</option>
+    <option></option>
+  </select>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
+  <a class="btn btn-info btn-sm" (click)="search(username.value, name.value)">
+    <span class="glyphicon glyphicon-search"></span> Search
+  </a>
+</div>
+
+
+<div class="center">
+  <table class="middle">
+    <tr>
+      <th>ID
+        <button type="button" class="btn btn-default btn-sm" (click)="paginationId(page)">
+          <span class="glyphicon glyphicon-chevron-down"></span>
+        </button>
+      </th>
+      <th>User Name
+        <button type="button" class="btn btn-default btn-sm" (click)="paginationUsername(page)">
+          <span class="glyphicon glyphicon-chevron-down"></span>
+        </button>
+      </th>
+      <th>Name
+        <button type="button" class="btn btn-default btn-sm" (click)="paginationName(page)">
+          <span class="glyphicon glyphicon-chevron-down"></span>
+        </button>
+      </th>
+      <th>Role</th>
+      <th>Age
+        <button type="button" class="btn btn-default btn-sm" (click)="paginationAge(page)">
+          <span class="glyphicon glyphicon-chevron-down"></span>
+        </button>
+      </th>
+      <th>Email</th>
+      <th>Phone</th>
+    </tr>
+    <tr *ngFor="let user of users ">
+      <td>{{user.id}}</td>
+      <td>{{user.username}}</td>
+      <td>{{user.name}}</td>
+      <td>{{user.authorities[0].authority}}</td>
+      <td>{{user.age}}</td>
+      <td>{{user.email}}</td>
+      <td>{{user.phone}}</td>
+      <td>
+        <a class="btn btn-info btn-sm" (click)="dataDispatch(user.id, user.username,user.password, user.name, user.email, user.phone, user.age, user.authorities[0].authority)">
+          <span class="glyphicon glyphicon-pencil"></span> Update
+        </a>
+      </td>
+      <td>
+        <a class="btn btn-info btn-sm" (click)="removeUser(user.id)">
+          <span class="glyphicon glyphicon-remove"></span> Delete
+        </a>
+      </td>
+    </tr>
+  </table>
+  <br>
+  <div>
+    <ngb-pagination class="page" [collectionSize]="maxSize * 10" [(page)]="page" [maxSize]="5" [rotate]="true"
+      [boundaryLinks]="true" (pageChange)="paginate($event)"></ngb-pagination>
+  </div>
+</div>

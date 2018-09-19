@@ -1,0 +1,27 @@
+<div class="login-form top-label-form" id="login-login-form" action="/login" accept-charset="UTF-8" method="post">
+  <input name="utf8" type="hidden" value="✓">
+  <input type="hidden" name="authenticity_token" value="627daL71kUqQEjgAcJjGHEzfRpH0X2+iyRbHbUU/KI/7dlOhv5Vhnn8lrPVU9Mcf8FLojeRW0S+sIt+36/ixJw==">
+
+  <div id="login-email" class="field">
+    <label for="login-email-field">Username or Email</label>
+    <input [(ngModel)]="registerModel.username" witdh="50" type="text" value="" required="required">
+  </div>
+
+  <div id="login-password" class="field">
+    <label for="login-password-field">Password</label>
+    <input [(ngModel)]="registerModel.password" required="required" type="password">
+  </div>
+
+  <div id="login-password" class="field">
+    <label for="login-password-field">Confirm Password</label>
+    <input [(ngModel)]="registerModel.passwordConfirm" required="required" type="password">
+  </div>
+
+  <div>
+    <button id="button" (click)="onNext()" class="btn2">
+      <span class="label">Next</span>
+      <span class="spinner"></span>
+    </button>
+    <div class="clear"></div>
+  </div>
+</div>
